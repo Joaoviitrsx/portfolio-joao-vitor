@@ -74,7 +74,7 @@ function Intro() {
       </div>
 
       <main className="flex flex-col pt-32 pl-0 md:pt-50 md:pl-[8%]">
-        <h1 className="max-w-275 text-5xl font-semibold leading-[0.96] tracking-tight sm:text-6xl md:text-8xl">
+        <h1 className="text-5xl font-semibold leading-[0.96] tracking-tight sm:text-6xl md:text-[4.8vw]">
           Hello, I build the web.
           <br />
           Web Developer and Experience Creator
