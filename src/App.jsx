@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Intro from "./sections/Intro";
-import WhoIAm from "./WhoIam";
+import WhoIAm from "./sections/WhoIAm";
 import WhatIBuild from "./sections/WhatIBuilt";
 import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
