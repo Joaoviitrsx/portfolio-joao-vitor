@@ -10,8 +10,8 @@ const hobbys =
   "Fora do código, gosto de jogar, ouvir música, e explorar novas tecnologias. Também curto descobrir coisas novas e passar horas aprendendo ou simplesmente fazendo algo que desperte minha curiosidade.";
 
 const infoBlocks = [
-  { label: "Quem sou eu", text: me },
-  { label: "Hobbys", text: hobbys },
+  { label: "ME", text: me },
+  { label: "HOBBY", text: hobbys },
 ];
 
 const clamp = (value, min = 0, max = 1) => Math.min(Math.max(value, min), max);
@@ -49,7 +49,7 @@ const InfoBlock = ({ label, text }) => (
       {label}
     </h2>
 
-    <p className="max-w-2xl text-lg leading-7 text-white/80 2xl:text-xl 2xl:leading-8">
+    <p className="max-w-2xl text-base leading-7 text-white/80 sm:text-lg 2xl:text-xl 2xl:leading-8">
       {text}
     </p>
   </div>
@@ -96,13 +96,13 @@ function WhoIAm() {
     <section
       ref={sectionRef}
       id="sobre"
-      className="relative min-h-screen px-8 pt-6 pb-96 text-[#FAFAFA]"
+      className="relative min-h-screen overflow-x-clip px-6 pt-6 pb-32 text-[#FAFAFA] md:px-8 lg:pb-96"
       style={{ backgroundColor: mixColors(GREEN, GRAY, blend) }}
     >
-      <div className="mx-auto flex min-h-screen max-w-8xl">
+      <div className="mx-auto flex max-w-8xl flex-col lg:min-h-screen lg:flex-row">
         {/* FOTO */}
-        <div className="flex w-[45%] items-center justify-center">
-          <div className="h-[70vh] w-[67%] overflow-hidden shadow-[30px_30px_80px_rgba(0,0,0,0.30),-30px_-30px_80px_rgba(255,255,255,0.06)]">
+        <div className="flex w-full items-center justify-center py-16 lg:w-[45%] lg:py-0">
+          <div className="h-[60vh] w-[85%] overflow-hidden shadow-[15px_15px_40px_rgba(0,0,0,0.30),-15px_-15px_40px_rgba(255,255,255,0.06)] sm:w-[70%] md:w-[55%] lg:h-[70vh] lg:w-[67%] lg:shadow-[30px_30px_80px_rgba(0,0,0,0.30),-30px_-30px_80px_rgba(255,255,255,0.06)]">
             <img
               src="/images/joao.jpg"
               alt="João Vitor"
@@ -113,8 +113,10 @@ function WhoIAm() {
 
         {/* CONTEÚDO */}
         <div
-          className={`flex w-[52%] items-start pt-32 transition-all duration-1400 ease-out ${
-            isVisible ? "translate-x-0 opacity-100" : "translate-x-40 opacity-0"
+          className={`flex w-full items-start pt-4 transition-all duration-1400 ease-out lg:w-[52%] lg:pt-32 ${
+            isVisible
+              ? "translate-x-0 translate-y-0 opacity-100"
+              : "translate-y-10 opacity-0 lg:translate-x-40 lg:translate-y-0"
           }`}
         >
           <div className="ml-auto w-full max-w-2xl">
@@ -123,8 +125,8 @@ function WhoIAm() {
             ))}
 
             {/* DESTAQUE */}
-            <div className="mt-24 ml-[-30%] w-[110%] px-10 py-8">
-              <h2 className="mb-3 text-4xl font-semibold uppercase tracking-tight 2xl:text-5xl">
+            <div className="mt-16 w-full py-4 lg:mt-24 lg:ml-[-30%] lg:w-[110%] lg:px-10 lg:py-8">
+              <h2 className="mb-3 text-3xl font-semibold uppercase tracking-tight sm:text-4xl 2xl:text-5xl">
                 João Vitor
               </h2>
 
@@ -136,7 +138,7 @@ function WhoIAm() {
 
               <a
                 href="#sobre"
-                className="mt-8 inline-flex items-center gap-3 text-lg font-medium transition hover:opacity-70 2xl:text-xl"
+                className="mt-8 inline-flex items-center gap-3 text-base font-medium transition hover:opacity-70 sm:text-lg 2xl:text-xl"
               >
                 About me
                 <BoxArrowIcon />
