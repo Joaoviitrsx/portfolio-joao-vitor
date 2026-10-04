@@ -43,7 +43,12 @@ function SocialLinks() {
 
       {/* Download CV */}
       <div className="social-item">
-        <a download aria-label="Download CV" className="social-button">
+        <a
+          href="public/DEV_JOÃO VITOR MOURA.pdf"
+          download
+          aria-label="Download CV"
+          className="social-button"
+        >
           <span className="social-fill"></span>
 
           <svg

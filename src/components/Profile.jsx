@@ -8,13 +8,12 @@ function Profile() {
           className="h-full w-full object-cover object-center"
         />
       </div>
-
       <div>
         <h2 className="text-3xl font-semibold">João Vitor</h2>
 
-        <p className="text-sm text-gray-600">Developer Full Stack</p>
+        <p className="text-sm opacity-60">Developer Full Stack</p>
 
-        <p className="text-sm text-gray-600">São Paulo, BR</p>
+        <p className="text-sm opacity-60">São Paulo, BR</p>
       </div>
     </div>
   );
